@@ -11,4 +11,4 @@ function Movieinfo() {
 }
 
 
-export default movieInfo
+export default Movieinfo
