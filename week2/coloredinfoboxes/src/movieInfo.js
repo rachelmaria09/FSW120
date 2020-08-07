@@ -1,8 +1,8 @@
 import react from "react"
 
-function movieInfo() {
+function Movieinfo() {
     return (
-        <div className="movieInfo">
+        <div className="Movieinfo">
             <h1>Title</h1>
             <h2>Subtitle</h2>
             <p>Information</p>
