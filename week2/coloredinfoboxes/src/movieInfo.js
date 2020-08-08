@@ -1,11 +1,12 @@
-import react from "react"
+import React from "react"
 
-function Movieinfo() {
+function Movieinfo(props) {
     return (
         <div className="Movieinfo">
-            <h1>Title</h1>
-            <h2>Subtitle</h2>
-            <p>Information</p>
+            <h1>{props.title}</h1>
+            <h2>{props.subtitle}</h2>
+            <p>{props.information}</p>
+            <hr/>
         </div>
     )
 }
