@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Vacation from "./Vacation";
+import Vacationdata from "./Vacationdata"
 
 function App() {
+  const vacationComponents = Vacationdata.map(vacation => <Vacation key = {vacation.id} place = {vacation.place} price = {vacation.price} timeToGo = {vacation.timeToGo} />)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {vacationComponents}
     </div>
-  );
+  )
 }
 
 export default App;
