@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
 import Square from './Square'
 import Header from './Header'
 
@@ -16,42 +16,63 @@ import Header from './Header'
         <div className="buttoncontainer">
           <button className="button1" onClick={() => {this.setState(prevState => {
             let newColors = []
-            for(let i = 0; i < prevState.colors.length; i++) {
+           for(let i = 0; i < prevState.colors.length; i++) {
               let color = prevState.colors[i]
-              if(prevState.colors[i] !== "white" ) {
-                //color = "black"
-                //newColors.push(color)
-                newColors = ["purple", "purple", "purple", "purple"]
-              } else if (prevState.colors[i] === "black" ) {
-                color = "white"
-                newColors.push(color)
-              } else {newColors.push(color)}
-            } console.log(newColors)
+              if(prevState.colors[0] !== "white" ) {
+                newColors = ["white", "white", "white", "white"]
+              } else if (prevState.colors[0] === "white" ) {
+                newColors = ["black", "black", "black", "black"]
+              }
+            } 
+            console.log(newColors)
             return({
               colors: newColors
-          })})}}>Click One!</button>
+          })})}}>Small time DJ: one</button>
 
           <button className="button2" onClick={() => {this.setState(prevState => {
             let newColors = []
-            for(let i = 0; i < prevState.colors.length; i++) {
-              let color = prevState.colors[i]
-              if(prevState.colors[i] === "white" ) {
-                color = "black"
-                newColors.push(color)
-              } else if (prevState.colors[i] === "black" ) {
-                color = "white"
-                newColors.push(color)
-              } else {newColors.push(color)}
-            } console.log(newColors)
+            newColors = ["purple", prevState.colors, "purple", prevState.colors]
             return({
               colors: newColors
-          })})}}>Click Two!</button>
-          <button className="button3" onClick={() => {}}>Click</button>
-          <button className="button4" onClick={() => {}}>Click</button>
-          <button className="button5" onClick={() => {}}>Click</button>
-          <button className="button6" onClick={() => {}}>Click</button>
-          <button className="button7" onClick={() => {}}>Click</button>
-          <button className="button8" onClick={() => {}}>Click</button>
+          })})}}>Party DJ: two</button>
+
+          <button className="button3" onClick={() => {this.setState(prevState => {
+            let newColors = []
+            newColors = [prevState.colors, "blue", prevState.colors, prevState.colors]
+            return({
+              colors: newColors
+          })})}}>Professional DJ: Three</button>
+
+          <button className="button4" onClick={() => {this.setState(prevState => {
+            let newColors = []
+            newColors = [prevState.colors, prevState.colors, prevState.colors, "blue"]
+            return({
+              colors: newColors
+          })})}}>Professional DJ: Four</button>
+          <button className="button5" onClick={() => {this.setState(prevState => {
+            let newColors = []
+            newColors = [prevState.colors[0], prevState.colors[2], prevState.colors[3], "red"]
+            return({
+              colors: newColors
+          })})}}>Big Time DJ: Five</button>
+          <button className="button6" onClick={() => {this.setState(prevState => {
+            let newColors = []
+            newColors = ["red", prevState.colors[2], prevState.colors[3], prevState.colors[1]]
+            return({
+              colors: newColors
+          })})}}>Big Time DJ: Six</button>
+          <button className="button7" onClick={() => {this.setState(prevState => {
+            let newColors = []
+            newColors = [prevState.colors[0], "red", prevState.colors[3], prevState.colors[1]]
+            return({
+              colors: newColors
+          })})}}>Big Time DJ: Seven</button>
+          <button className="button8" onClick={() => {this.setState(prevState => {
+            let newColors = []
+            newColors = [prevState.colors[0], prevState.colors[2], "red", prevState.colors[1]]
+            return({
+              colors: newColors
+          })})}}>Big Time DJ: Eight</button>
         </div>
     </div>
   )
