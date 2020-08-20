@@ -1,13 +1,11 @@
 import React from 'react'
 
-const colors = ["Blue", "Green", "Purple", "Red"];
-
 const Square = props => (
     <div className="grid">
-        <div className="box1">one</div>
-        <div className="box2">two</div>
-        <div className="box3">three</div>
-        <div className="box4">four</div>
+        <div style = {{backgroundColor: props.color[0]}}className="box1">one</div>
+        <div style = {{backgroundColor: props.color[1]}} className="box2">two</div>
+        <div style = {{backgroundColor: props.color[2]}}className="box3">three</div>
+        <div style = {{backgroundColor: props.color[3]}}className="box4">four</div>
     </div>
 )
 
