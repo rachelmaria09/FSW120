@@ -30,23 +30,8 @@ class App extends Component {
 
         <br />
         <br />
-
-        <textarea
-          value={"Some default value"}
-          onChange={this.handleChange}
-        />
-
-        <br />
         
         <button>Submit</button>
-        {/* <label>
-          <input
-            type="checkbox"
-            name="isChecked"
-            checked={this.state.isChecked}
-            onChange={this.handleChange}
-          /> Is Checked?
-        </label> */}
 
         <h1>{this.state.firstName}</h1>
       </form>
