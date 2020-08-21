@@ -1,20 +1,24 @@
 import React, {Component} from 'react'
 import './App.css'
-import Name from './Name'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
       firstName: "",
-      isChecked: false
     }
     this.handleChange=this.handleChange.bind(this)
   }
 
   handleChange(event) {
-    const {name, value, type, checked}=event.target
-    type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
+    const {name, value} = event.target
+    this.setState({
+      [name]: value
+    })
+  }
+
+  handleClick() {
+    console.log("HI")
   }
 
   render() {
@@ -31,7 +35,7 @@ class App extends Component {
         <br />
         <br />
         
-        <button>Submit</button>
+        <button onClick={this.handleClick}>Submit</button>
 
         <h1>{this.state.firstName}</h1>
       </form>
