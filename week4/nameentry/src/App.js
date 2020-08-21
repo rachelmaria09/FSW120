@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 import './App.css'
+import shortid from 'shortid'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
       firstName: "",
+      names: []
     }
     this.handleChange=this.handleChange.bind(this)
   }
@@ -17,13 +19,19 @@ class App extends Component {
     })
   }
 
-  handleClick() {
-    console.log("HI")
+  handleClick = (event) => {
+    event.preventDefault()
+    this.setState(
+    prevState =>  
+    ({
+    names: [this.state.firstName, ...prevState.names], 
+    firstName: ""
+    }))
   }
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input 
           type="text" 
           value={this.state.firstName} 
@@ -35,9 +43,11 @@ class App extends Component {
         <br />
         <br />
         
-        <button onClick={this.handleClick}>Submit</button>
-
-        <h1>{this.state.firstName}</h1>
+        <button type="submit" className="btn" onClick={(e) => this.handleClick(e)}>Submit</button>
+      <ul>
+        <li className="listItem"><h1>{this.state.firstName}</h1></li>
+        {this.state.names.map((name,index)=> (<li><h1>{name}</h1></li>))}
+      </ul>
       </form>
     )
   }
