@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './App.css'
+import Name from './Name'
 
 class App extends Component {
   constructor() {
@@ -14,7 +15,6 @@ class App extends Component {
   handleChange(event) {
     const {name, value, type, checked}=event.target
     type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
-    }
   }
 
   render() {
@@ -27,9 +27,9 @@ class App extends Component {
           placeholder="First Name" 
           onChange={this.handleChange}
         />
-        {
 
-        }
+        <br />
+        <br />
 
         <textarea
           value={"Some default value"}
@@ -38,14 +38,15 @@ class App extends Component {
 
         <br />
         
-        <label>
+        <button>Submit</button>
+        {/* <label>
           <input
             type="checkbox"
             name="isChecked"
             checked={this.state.isChecked}
             onChange={this.handleChange}
           /> Is Checked?
-        </label>
+        </label> */}
 
         <h1>{this.state.firstName}</h1>
       </form>
