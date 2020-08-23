@@ -13,7 +13,6 @@ class Inputs extends Component {
         general: "",
         names: []
       }
-      this.inputUpdated = this.inputUpdated.bind(this)
       this.handleChange=this.handleChange.bind(this)
     }
   
@@ -26,22 +25,36 @@ class Inputs extends Component {
   
     handleClick = (event) => {
       event.preventDefault()
+      let badgeObj = {
+          firstName: this.state.firstName,
+          lastName: this.state.lastName,
+          email: this.state.email,
+          placeOfBirth: this.state.placeOfBirth,
+          phone: this.state.phone,
+          favoriteFood: this.state.favoriteFood,
+          general: this.state.general
+      }
+      var counter = false
+      for(let i=0; i<Object.values(badgeObj).length; i++) {
+          if(Object.values(badgeObj)[i]<3) {
+            counter = true 
+          }
+      }
+      if(!counter) {
       this.setState(
-      prevState =>  
-      ({
-      names: [this.state.firstName, ...prevState.names], 
-      firstName: ""
-      }))
-    }
-
-    inputUpdated(e) {
-        const { value } = e.target;
-        this.setState({firstName: value})
+        prevState =>  
+        ({
+          names: [...prevState.names, badgeObj]
+        })) 
+    } else {
+        return alert("Please enter proper values.")
+        }
     }
   
     render() {
       return (
-        <form className="grid" onSubmit={this.handleSubmit}>
+        <form  onSubmit={this.handleSubmit}>
+        <div className="grid">
           <input 
             type="text" 
             value={this.state.firstName} 
@@ -49,7 +62,6 @@ class Inputs extends Component {
             className="firstName"
             placeholder="First Name" 
             onChange={this.handleChange}
-            onInput={this.inputUpdated}
           />
           <input
             type="text"
@@ -58,8 +70,6 @@ class Inputs extends Component {
             className="lastName"
             placeholder="Last Name"
             onChange={this.handleChange}
-            onInput={this.inputUpdated}
-
           />
           <input
             type="text"
@@ -68,7 +78,6 @@ class Inputs extends Component {
             className="email"
             placeholder="Email"
             onChange={this.handleChange}
-            onInput={this.inputUpdated}
           />
           <input
             type="text"
@@ -77,7 +86,6 @@ class Inputs extends Component {
             className="placeOfBirth"
             placeholder="Place of Birth"
             onChange={this.handleChange}
-            onInput={this.inputUpdated}
           />
           <input
             type="text"
@@ -86,7 +94,6 @@ class Inputs extends Component {
             className="phone"
             placeholder="Phone"
             onChange={this.handleChange}
-            onInput={this.inputUpdated}
           />
           <input
             type="text"
@@ -95,7 +102,6 @@ class Inputs extends Component {
             className="favoriteFood"
             placeholder="Favorite Food"
             onChange={this.handleChange}
-            onInput={this.inputUpdated}
           />
           <input
             type="text"
@@ -104,18 +110,24 @@ class Inputs extends Component {
             className="general"
             placeholder="Tell us about yourself!"
             onChange={this.handleChange}
-            onInput={this.inputUpdated}
           />
           <br />
           <br />
-          
+        
           <button type="submit" className="btn" onClick={(e) => this.handleClick(e)}>Submit</button>
-        <ul>
-          <li className="listItem"><h1>{this.state.firstName}</h1></li>
-          {this.state.names.map((name,index)=> (<li><h1>{name}</h1></li>))}
-        </ul>
-        </form>
-    
+        </div>
+          <h1>{this.state.badgeObj}</h1>
+          {this.state.names.map((badge, index) => (
+            <div className="badge">
+                <div className="title">Badge:</div>
+                <div className= "firstNameBadge"> Name: {badge.firstName} {badge.lastName}</div>
+                <div className="emailBadge"> Email: {badge.email}</div>
+                <div className="placeOfBirthBadge">Place of birth: {badge.placeOfBirth}</div>
+                <div className="phoneBadge">Phone: {badge.phone}</div>
+                <div className="favoriteFoodBadge">Favorite Food: {badge.favoriteFood}</div>
+                <div className="generalBadge">{badge.general}</div>
+            </div>))}
+            </form>
       )
     }
   }
