@@ -1,3 +1,125 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+.nav {
+  background-color: grey;
+  height: 40px;
+  text-align: right;
+}
+.home {
+  text-decoration: none;
+  color: black;
+  margin: 4px;
+  font-size: small;
+}
+.about {
+  text-decoration: none;
+  color: black;
+  margin: 4px;
+  font-size: small;
+}
+.services {
+  text-decoration: none;
+  color: black;
+  margin: 4px;
+  font-size: small;
+}
+.title {
+  text-align: center;
+  background-color: black;
+  color: white;
+  height: 80px;
+  margin: 0;
+}
+.img1 {
+  height: auto;
+  width: 99vw;
+  border: 2px solid black;
+  position: relative;
+  text-align: center;
+}
+.homeText {
+  position: absolute;
+  text-align: center;
+  top: 10vw;
+  font-weight: bolder;
+  font-size: 1em;
+  margin: 25vw;
+  padding: 20px;
+  line-height: 26px;
+  background-color: rgba(255, 255, 255, 0.541);
+}
+.img2 {
+    height: auto;
+    width: 99vw;
+    border: 2px solid black;
+    position: relative;
+    text-align: center;
+}
+.aboutText {
+  position: absolute;
+  text-align: center;
+  top: 10vw;
+  font-weight: bolder;
+  font-size: 1em;
+  margin: 25vw;
+  padding: 20px;
+  line-height: 26px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.301);
+}
+.img3 {
+  height: auto;
+  width: 99vw;
+  border: 2px solid black;
+  position: relative;
+  text-align: center;
+}
+.servicesText {
+  position: absolute;
+  text-align: center;
+  top: 10vw;
+  font-weight: bolder;
+  font-size: 1em;
+  margin: 25vw;
+  margin-left: 40%;
+  padding: 20px;
+  line-height: 50px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.452);
+}
+.footer {
+  text-align: center;
+  margin-top: 30px;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (max-width: 400px) {
+.homeText {
+  width: 95vw;
+  margin-left: 0;
+  top: 20vw;
+  padding: 5vw;
+  padding-right: 0;
+  font-size: 0.8em;
+}
+.aboutText {
+    width: 95vw;
+    margin-left: 0;
+    top: 20vw;
+    padding: 5vw;
+    padding-right: 0;
+    font-size: 0.8em;
+}
+.servicesText {
+  width: 95vw;
+  margin-left: 0;
+  top: 20vw;
+  padding: 5vw;
+  padding-right: 0;
+  line-height: 40px;
+  font-size: 0.8em;
+}
+}
