@@ -84,7 +84,7 @@ body {
   margin: 25vw;
   margin-left: 40%;
   padding: 20px;
-  line-height: 50px;
+  line-height: 40px;
   color: black;
   background-color: rgba(255, 255, 255, 0.452);
 }
@@ -116,7 +116,7 @@ html, body {
 .servicesText {
   width: 95vw;
   margin-left: 0;
-  top: 20vw;
+  top: 19vw;
   padding: 5vw;
   padding-right: 0;
   line-height: 40px;
