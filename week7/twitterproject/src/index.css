@@ -1,0 +1,96 @@
+body {
+  font-family: 'Arimo', sans-serif;
+  background-color: navy;
+  color: white;
+  text-align: center;
+}
+.nav {
+    background-color: white;
+    height: 80px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.homeLink {
+  text-decoration: none;
+  color: navy;
+  font-weight: 900;
+  margin: 5px;
+}
+.feedLink {
+  text-decoration: none;
+  color: navy;
+  font-weight: 900;
+  margin: 5px;
+}
+.tweetLink {
+  text-decoration: none;
+  color: navy;
+  font-weight: 900;
+  margin: 5px;
+}
+.homeText {
+  margin: 30px;
+}
+.btn {
+  border: none;
+  height: 24px;
+  width: 80px;
+  background-color: white;
+  color: navy;
+  margin: 20px;
+  border-radius: 10px;
+}
+input {
+  margin: 10px;
+}
+.userNameInput {
+  height: 28px;
+  border: none;
+}
+.passwordInput {
+  height: 28px;
+  border: none;
+}
+.footer {
+  text-align: center;
+  list-style-type: none;
+  padding: 10px;
+  background-color: rgba(25, 174, 243, 0.705);
+}
+li {
+  display: inline;
+  margin: 15px;
+  font-size: small;
+}
+.tweetContainer {
+  background-color: white;
+  color: black;
+  height: 100px;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: left;
+  padding: 10px;
+}
+.tweetInput {
+  height: 40px;
+  width: 300px;
+  border: none;
+}
+.feedImage {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+}
+.fakeFeed {
+  margin: 80px;
+  width: 400px;
+  background-color: white;
+  border: 4px solid lightgray;
+  color: black;
+  padding: 10px;
+  text-align: left;
+}
+.commentIcon {
+  margin-right: 10px;
+}
